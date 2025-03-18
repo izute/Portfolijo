@@ -1,122 +1,138 @@
- <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
-<title>10. klases portfolijo</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-.w3-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
-</style>
+  <title>Mans datorikas portfelis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <!-- Papildus stili (ja nepieciešams) -->
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .w3-bar .w3-button {
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="w3-main" style="margin-left:250px">
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Gimp images</h1>
-      <p>Pirmajā nedēļā mēs veidojām GIMP bildes. Mācijāmies, kā veidot bildes </p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+<!-- Navigācijas josla (līdzīga Band paraugam) -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card" style="display: flex; justify-content: center;">
+      <a href="#home" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
+      <a href="#temas" class="w3-bar-item w3-button w3-padding-large">1. semestra tēmas</a>
+      <a href="#gimp" class="w3-bar-item w3-button w3-padding-large">GIMP darbi</a>
+      <a href="#modelesana" class="w3-bar-item w3-button w3-padding-large">3D modelēšana</a>
+      <a href="#video" class="w3-bar-item w3-button w3-padding-large">Video projekts</a>
     </div>
   </div>
+  
 
-  <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
+<!-- Sākuma galvene ar fona krāsu/attēlu -->
+<header class="w3-container w3-blue w3-center" style="padding:128px 16px" id="home">
+  <h1 class="w3-margin w3-jumbo">Mans datorikas portfolio</h1>
+  <p class="w3-xlarge">Šeit apkopoti mani darbi un mācību progress 10. klasē</p>
+</header>
+
+<!-- 1. semestra tēmas un vērtējumi -->
+<div class="w3-container w3-padding-64 w3-light-grey" id="tēmas">
+  <h2 class="w3-center">1. semestrī paredzētie datorikas vērtējumi</h2>
+  <p class="w3-center">Tabula ar plānotajiem uzdevumiem, iesniegšanas termiņiem un vērtējumu informāciju.</p>
+
+  <div class="w3-responsive w3-card-4 w3-margin-top">
+    <table class="w3-table w3-striped w3-bordered">
+      <thead>
+        <tr class="w3-blue">
+          <th>Tēma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rastrgrafikas darbs (GIMP)</td>
+        </tr>
+        <tr>
+          <td>Grupu darbs, ieskaite 3D modeļa izdrukai</td>
+        </tr>
+        <tr>
+          <td>Pārbaudes darbs par MS Word</td>
+        </tr>
+        <tr>
+          <td>Video projekts (uzdevums mapē 1810)</td>
+        </tr>
+        <tr>
+          <td>Papildus uzdevums – vektorgrafikas darbs (Inkscape)</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a class="w3-button w3-black" href="#">1</a>
-      <a class="w3-button w3-hover-black" href="#">2</a>
-      <a class="w3-button w3-hover-black" href="#">3</a>
-      <a class="w3-button w3-hover-black" href="#">4</a>
-      <a class="w3-button w3-hover-black" href="#">5</a>
-      <a class="w3-button w3-hover-black" href="#">»</a>
-    </div>
-  </div>
-
-  <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
-    </div>
-
-    <div class="w3-container w3-theme-l1">
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
-  </footer>
-
-<!-- END MAIN -->
 </div>
 
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
+<!-- GIMP darbi (rastrgrafikas sadaļa) -->
+<div class="w3-container w3-padding-64" id="gimp">
+    <h2 class="w3-center">GIMP darbi</h2>
+    <p class="w3-center"> Mums bija jāizveido vairākas bildes 
+        gimp vidē, apakšā pievienoju divas no tām 
+        bildēm, kuras tika novērtētas ar ballēm.</p>
+  
+    <!-- Flex konteineris, kas centrē iekšējos elementus -->
+    <div class="w3-row-padding" style="display: flex; justify-content: center; margin-top:32px;">
+      <div class="w3-col m4 w3-center">
+        <img src="Capture.PNG" alt="GIMP darbs 1" style="width:100%">
+        <p> Bildi veidoju pēc parauga un</p>
+      </div>
+      <div class="w3-col m4 w3-center">
+        <img src="ziloni gimp.PNG" alt="GIMP darbs 2" style="width:100%">
+        <p>Apraksts otrajam darbam</p>
+      </div>
+    </div>
+  </div>
+  
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
+<!-- 3D modelēšana (Grupu darbs) -->
+<div class="w3-container w3-padding-64 w3-light-grey" id="modelēšana">
+  <h2 class="w3-center">3D modelēšana</h2>
+  <p class="w3-center">Grupu darbs un 3D modeļu izdruka.</p>
+  <div class="w3-row-padding" style="margin-top:32px">
+    <div class="w3-col m6">
+      <img src="images/3d_model1.jpg" alt="3D modelis 1" style="width:100%">
+      <p>Īss apraksts par 3D modeli</p>
+    </div>
+    <div class="w3-col m6">
+      <img src="images/3d_model2.jpg" alt="3D modelis 2" style="width:100%">
+      <p>Īss apraksts par 3D modeli</p>
+    </div>
+  </div>
+</div>
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
+<!-- Video projekts -->
+<div class="w3-container w3-padding-64" id="video">
+  <h2 class="w3-center">Video projekts</h2>
+  <p class="w3-center">Plānotais video projekts (uzdevums mapē 1810).</p>
+  <div class="w3-content" style="max-width:600px">
+    <!-- Šeit vari ievietot YouTube video iFrame vai attēlus no sava projekta -->
+    <div class="w3-center w3-padding-16">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+              title="YouTube video" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+    <p>
+      Īss apraksts par video projekta mērķi un saturu: 
+      <br>
+      - Video sižets
+      <br>
+      - Montāžas rīki
+      <br>
+      - Prezentācijas datums
+    </p>
+  </div>
+</div>
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
-</script>
+<!-- Kājene -->
+<footer class="w3-container w3-black w3-center w3-padding-32">
+  <p>Veidots ar <a href="https://www.w3schools.com/w3css/" target="_blank">W3.CSS</a> “Band” stila palīdzību</p>
+</footer>
 
 </body>
 </html>
