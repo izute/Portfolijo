@@ -20,16 +20,27 @@
 
 <!-- Navigācijas josla (līdzīga Band paraugam) -->
 <div class="w3-top">
-    <div class="w3-bar w3-black w3-card" style="display: flex; justify-content: center;">
-      <a href="#home" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
-      <a href="#tēmas" class="w3-bar-item w3-button w3-padding-large">1. un 2. semestra tēmas</a>
-      <a href="#gimp" class="w3-bar-item w3-button w3-padding-large">GIMP darbi</a>
-      <a href="#modelēšana" class="w3-bar-item w3-button w3-padding-large">3D modelēšana</a>
-      <a href="#msword" class="w3-bar-item w3-button w3-padding-large">MS Word</a>
-      <a href="#video" class="w3-bar-item w3-button w3-padding-large">Video projekts</a>
-      <a href="#msexcel" class="w3-bar-item w3-button w3-padding-large">MS Excel</a>
-    </div>
+  <div class="w3-bar w3-black w3-card" style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
+    <a href="#tēmas" class="w3-bar-item w3-button w3-padding-large">1. un 2. semestra tēmas</a>
+    <a href="#gimp" class="w3-bar-item w3-button w3-padding-large">GIMP darbi</a>
+    <a href="#modelēšana" class="w3-bar-item w3-button w3-padding-large">3D modelēšana</a>
+    <a href="#msword" class="w3-bar-item w3-button w3-padding-large">MS Word</a>
+    <a href="#video" class="w3-bar-item w3-button w3-padding-large">Video projekts</a>
+    <a href="#msexcel" class="w3-bar-item w3-button w3-padding-large">MS Excel</a>
   </div>
+</div>
+
+<!-- Responsive styling for smaller screens -->
+<style>
+  @media screen and (max-width: 600px) {
+    .w3-bar .w3-button {
+      padding: 12px 8px !important;
+      font-size: 16px;             
+    }
+  }
+</style>
+
   
 
 <!-- Sākuma galvene ar fona krāsu/attēlu -->
