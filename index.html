@@ -24,44 +24,60 @@
 <body>
 
 <!-- Navigācijas josla -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <!-- Hamburger icon for small screens -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium hamburger" onclick="toggleNav()">☰ Menu</a>
-    <!-- Desktop Navigation -->
-    <div class="w3-hide-small" style="display: flex; justify-content: center; width: 100%;">
-      <a href="#home" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
-      <a href="#tēmas" class="w3-bar-item w3-button w3-padding-large">1. un 2. semestra tēmas</a>
-      <a href="#gimp" class="w3-bar-item w3-button w3-padding-large">GIMP darbi</a>
-      <a href="#modelēšana" class="w3-bar-item w3-button w3-padding-large">3D modelēšana</a>
-      <a href="#msword" class="w3-bar-item w3-button w3-padding-large">MS Word</a>
-      <a href="#video" class="w3-bar-item w3-button w3-padding-large">Video projekts</a>
-      <a href="#msexcel" class="w3-bar-item w3-button w3-padding-large">MS Excel</a>
+<header>
+  <nav class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <!-- Hamburger ikona mazākiem ekrāniem -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium hamburger" onclick="toggleNav()">☰ Menu</a>
+      <!-- Desktop navigācija -->
+      <div class="w3-hide-small" style="display: flex; justify-content: center; width: 100%;">
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
+        <a href="#tēmas" class="w3-bar-item w3-button w3-padding-large">1. un 2. semestra tēmas</a>
+        <a href="#gimp" class="w3-bar-item w3-button w3-padding-large">GIMP darbi</a>
+        <a href="#modelēšana" class="w3-bar-item w3-button w3-padding-large">3D modelēšana</a>
+        <a href="#msword" class="w3-bar-item w3-button w3-padding-large">MS Word</a>
+        <a href="#video" class="w3-bar-item w3-button w3-padding-large">Video projekts</a>
+        <a href="#msexcel" class="w3-bar-item w3-button w3-padding-large">MS Excel</a>
+      </div>
+      <!-- Mobilā navigācija (sākotnēji paslēpta) -->
+      <div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="width: 100%;">
+        <a href="#home" class="w3-bar-item w3-button">Sākums</a>
+        <a href="#tēmas" class="w3-bar-item w3-button">1. un 2. semestra tēmas</a>
+        <a href="#gimp" class="w3-bar-item w3-button">GIMP darbi</a>
+        <a href="#modelēšana" class="w3-bar-item w3-button">3D modelēšana</a>
+        <a href="#msword" class="w3-bar-item w3-button">MS Word</a>
+        <a href="#video" class="w3-bar-item w3-button">Video projekts</a>
+        <a href="#msexcel" class="w3-bar-item w3-button">MS Excel</a>
+      </div>
     </div>
-    <!-- Telefona navigācijas josla -->
-    <div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
-      <a href="#home" class="w3-bar-item w3-button">Sākums</a>
-      <a href="#tēmas" class="w3-bar-item w3-button">1. un 2. semestra tēmas</a>
-      <a href="#gimp" class="w3-bar-item w3-button">GIMP darbi</a>
-      <a href="#modelēšana" class="w3-bar-item w3-button">3D modelēšana</a>
-      <a href="#msword" class="w3-bar-item w3-button">MS Word</a>
-      <a href="#video" class="w3-bar-item w3-button">Video projekts</a>
-      <a href="#msexcel" class="w3-bar-item w3-button">MS Excel</a>
-    </div>
-  </div>
-</div>
+  </nav>
+</header>
 
-<!-- Adaptīvs skripts telefona navigācijai -->
+<!-- Responsive skripts mobilajai navigācijai -->
 <script>
-function toggleNav() {
-  var x = document.getElementById("mobileNav");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
+  function toggleNav() {
+    var x = document.getElementById("mobileNav");
+    if (x.className.indexOf("w3-show") === -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
   }
-}
 </script>
+
+
+<style>
+  @media screen and (max-width: 600px) {
+    #mobileNav {
+      width: 100% !important;
+    }
+    /* Var samazināt pogu atstarpes, ja nepieciešams */
+    .w3-bar .w3-button {
+      padding: 12px 8px !important;
+      font-size: 16px;
+    }
+  }
+</style>
 
 <!-- Sākuma galvene ar fona krāsu/attēlu -->
 <header class="w3-container w3-blue w3-center" style="padding:128px 16px" id="home">
