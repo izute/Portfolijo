@@ -152,71 +152,120 @@
     }
   }
 </script>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <title>Mans datorikas portfelis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    /* Vispārējie fonti un noformējums */
+    body, h1, h2, h3, h4, h5, h6, p, ul, li {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Nedaudz atstarpe starp saraksta elementiem */
+    .sub-list li {
+      margin-bottom: 6px;
+    }
+    /* Pievieno nelielu atstarpi starp sekcijām */
+    .theme-section {
+      margin-bottom: 20px;
+    }
+    /* Pielāgots stils figure elementam */
+    .custom-figure {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
 
 <!-- Sākuma galvene -->
-<header class="custom-header" id="home">
+<header class="custom-header w3-container w3-center" id="home" style="padding:128px 16px; background-color:#2196F3; color:#fff;">
   <h1>Individuālā tēma</h1>
   <p>Detalizēta informācija par izvēlēto tēmu</p>
 </header>
 
 <!-- Galvenais saturs -->
-<div class="w3-container custom-content" id="tema">
-  <div class="w3-row-padding" style="margin-top:32px">
+<div class="w3-container custom-content" id="tema" style="padding:64px 16px;">
+  <div class="w3-row-padding" style="margin-top:32px;">
+    
+    <!-- Tēmas apraksts (kreisā kolonna) -->
     <div class="w3-col m6">
       <h2>Tēmas apraksts</h2>
-      <p>
-<div>
-  <p><strong>1. Regulāra dublēšana (Backup) </p></strong>
-    <ul class="sub-list">
-<li>Izmanto automatizētus rīkus, kas veido dublējumus katru dienu vai nedēļu.</li>
-<li>Glabā datus vairākās vietās: mākoņkrātuvēs (Google Drive, OneDrive), ārējos diskos vai NAS ierīcēs.</li>
-<li>Lieto sistēmu, kas saglabā vairākas versijas – tas palīdz atgūt iepriekšējos failus kļūmes gadījumā.</li>
-    </ul>
-  <p><strong>2. Drošības risinājumi</p></strong>
-    <ul class="sub-list">
-<li>Regulāri atjauno antivīrusu programmatūru, lai aizsargātu pret ļaunatūru un vīrusiem.</li>
-<li>Uzstādi ugunsmūrus un rūpējies par tīkla drošību, lai novērstu nesankcionētu piekļuvi.</li>
-<li>Šifrē sensitīvus failus – tas padara datus grūtāk pieejamus pat, ja tie tiek nozagti.</li>
-   </ul>
-  <p><strong>3. Lietotāju paradumi un datu pārvaldība</p></strong>
+      
+      <div class="theme-section">
+        <p><strong>1. Regulāra dublēšana (Backup)</strong></p>
         <ul class="sub-list">
-<li>Regulāri pārbaudi svarīgos failus un to integritāti.</li>
-<li>Izmanto spēcīgas paroles un divfaktoru autentifikāciju, lai ierobežotu piekļuvi datiem.</li>
-<li>Apmāci sevi un citus atpazīt draudus, piemēram, pikšķerēšanas e-pastus.</li>
-   </ul>
-  <p><strong>4. Aizsardzība pret aparatūras kļūmēm</p></strong>
-    <ul class="sub-list">
-<li>Izmanto RAID tehnoloģiju, kas ļauj aizsargāt datus pat viena diska bojājuma gadījumā.</li>
-<li> Nepārtrauktās barošanas avoti (UPS) aizsargā pret strāvas pārrāvumiem un datu bojājumiem.</li>
-   </ul>
-  <p><strong>5. Atgūšanas stratēģijas</p></strong>
-    <ul class="sub-list">
-<li> Sagatavo datu atgūšanas rīkus, kas ļauj atjaunot informāciju no bojātiem nesējiem.</li>
-<li> Izstrādā ārkārtas situāciju plānu – tas palīdz ātri un pareizi rīkoties datu zuduma gadījumā.</li>      </p>
-   </ul>
-</div>
+          <li>Izmanto automatizētus rīkus, kas veido dublējumus katru dienu vai nedēļu.</li>
+          <li>Glabā datus vairākās vietās: mākoņkrātuvēs (Google Drive, OneDrive), ārējos diskos vai NAS ierīcēs.</li>
+          <li>Lieto sistēmu, kas saglabā vairākas versijas – tas palīdz atgūt iepriekšējos failus kļūmes gadījumā.</li>
+        </ul>
+      </div>
+      
+      <div class="theme-section">
+        <p><strong>2. Drošības risinājumi</strong></p>
+        <ul class="sub-list">
+          <li>Regulāri atjauno antivīrusu programmatūru, lai aizsargātu pret ļaunatūru un vīrusiem.</li>
+          <li>Uzstādi ugunsmūrus un rūpējies par tīkla drošību, lai novērstu nesankcionētu piekļuvi.</li>
+          <li>Šifrē sensitīvus failus – tas padara datus grūtāk pieejamus pat, ja tie tiek nozagti.</li>
+        </ul>
+      </div>
+      
+      <div class="theme-section">
+        <p><strong>3. Lietotāju paradumi un datu pārvaldība</strong></p>
+        <ul class="sub-list">
+          <li>Regulāri pārbaudi svarīgos failus un to integritāti.</li>
+          <li>Izmanto spēcīgas paroles un divfaktoru autentifikāciju, lai ierobežotu piekļuvi datiem.</li>
+          <li>Apmāci sevi un citus atpazīt draudus, piemēram, pikšķerēšanas e-pastus.</li>
+        </ul>
+      </div>
+      
+      <div class="theme-section">
+        <p><strong>4. Aizsardzība pret aparatūras kļūmēm</strong></p>
+        <ul class="sub-list">
+          <li>Izmanto RAID tehnoloģiju, kas ļauj aizsargāt datus pat viena diska bojājuma gadījumā.</li>
+          <li>Nepārtrauktās barošanas avoti (UPS) aizsargā pret strāvas pārrāvumiem un datu bojājumiem.</li>
+        </ul>
+      </div>
+      
+      <div class="theme-section">
+        <p><strong>5. Atgūšanas stratēģijas</strong></p>
+        <ul class="sub-list">
+          <li>Sagatavo datu atgūšanas rīkus, kas ļauj atjaunot informāciju no bojātiem nesējiem.</li>
+          <li>Izstrādā ārkārtas situāciju plānu – tas palīdz ātri un pareizi rīkoties datu zuduma gadījumā.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Reklāmas video (labā kolonna) -->
     <div class="w3-col m6">
-      <h2>Plakāts vai animācija</h2>
+      <h2>Reklāmas video</h2>
       <figure class="custom-figure">
-      <div style="text-align: center;">
-  <video controls style="display: inline-block; width: 70%; max-width: 300px;">
-    <source src="images/reklama datorika.MP4" type="video/mp4">
-  </video>
-  <p>Powerpointā veidotā reklāma.</p>
-</div>
-        <figcaption>Tēmas plakāts</figcaption>
+        <div style="text-align: center;">
+          <video controls style="display: inline-block; width: 70%; max-width: 300px;">
+            <source src="images/reklama datorika.MP4" type="video/mp4">
+          </video>
+          <p>PowerPointā veidotā reklāma.</p>
+        </div>
+        <figcaption style="text-align: center;">Tēmas plakāts</figcaption>
       </figure>
     </div>
+    
   </div>
 </div>
+
 
 <!-- Izmantotie informācijas avoti -->
 <footer class="custom-footer">
   <p>Izmantotie informācijas avoti:</p>
   <p>
     <a href="https://cert.lv/lv/par-mums/pasakumu-personas-datu-apstrades-kartiba" target="_blank">Izmantotais avots</a>
-    <a href="https://www.example.com/source2" target="_blank">Avots 2</a>
-    <a href="https://www.example.com/source3" target="_blank">Avots 3</a>
+
   </p>
 </footer>
 
