@@ -1,99 +1,107 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Individuālā tēma - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <style>
-    /* Konteinera stils, lai saturs būtu centrēts */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    /* Stils navigācijas paneļam */
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      padding: 0;
+    /* Vispārējie fonti un noformējums */
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    nav ul li a {
+    .w3-bar .w3-button {
       text-decoration: none;
-      color: #000;
     }
-    /* Vizuālā materiāla stils */
-    .visual {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Pamata teksta stils */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer, main {
-      margin-bottom: 20px;
-    }
-    header h1 {
-      margin-bottom: 10px;
-    }
-    footer ul {
-      list-style: none;
-      padding: 0;
-    }
-    footer ul li {
-      margin-bottom: 5px;
+    /* Pogām mobilajā režīmā */
+    @media screen and (max-width: 600px) {
+      .w3-bar .w3-button {
+        padding: 12px 8px !important;
+        font-size: 16px;
+      }
+      /* Nodrošina, ka mobilā izvēlne aizņem visu platumu */
+      #mobileNav {
+        width: 100% !important;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Individuālā tēma</h1>
-      <nav>
-        <ul>
-          <!-- Navigācijas saite uz dokumenta teksta sadaļu -->
-          <li><a href="#tema">Tēmas apraksts</a></li>
-          <!-- Citas saites uz index.html dokumenta attiecīgām nodaļām -->
-          <li><a href="index.html#video">Video</a></li>
-          <li><a href="index.html#gallery">Galerija</a></li>
-          <li><a href="index.html#contact">Kontakti</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <!-- Sekcija ar detalizētu informāciju par izvēlēto tēmu -->
-      <section id="tema">
-        <article>
-          <h2>Tēmas apraksts</h2>
-          <p>
-            Šajā sadaļā ir iekļauta detalizēta informācija par izvēlēto individuālo tēmu. Teksts ir strukturēts ar semantiskiem HTML tagiem, kas nodrošina dokumenta loģisku uzbūvi.
-          </p>
-        </article>
-        <article>
-          <h2>Plakāts vai animācija</h2>
-          <figure>
-            <!-- Vizuāls materiāls – plakāta vai animācijas attēls -->
-            <img src="poster.jpg" alt="Tēmas plakāts" class="visual">
-            <figcaption>Tēmas plakāts</figcaption>
-          </figure>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      <p>Izmantotie informācijas avoti:</p>
-      <ul>
-        <li><a href="https://www.example.com/source1" target="_blank">Avots 1</a></li>
-        <li><a href="https://www.example.com/source2" target="_blank">Avots 2</a></li>
-        <li><a href="https://www.example.com/source3" target="_blank">Avots 3</a></li>
-      </ul>
-    </footer>
+<!-- Navigācijas josla -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card" style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Sākums</a>
+    <a href="index.html#video" class="w3-bar-item w3-button w3-padding-large">Video</a>
+    <a href="index.html#gallery" class="w3-bar-item w3-button w3-padding-large">Galerija</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large">Kontakti</a>
+    <!-- Navigācijas saite uz pašreizējo lapu -->
+    <a href="#tema" class="w3-bar-item w3-button w3-padding-large">Individuālā tēma</a>
   </div>
+  <!-- Mobilā navigācija -->
+  <div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="width: 100%;">
+    <a href="index.html" class="w3-bar-item w3-button">Sākums</a>
+    <a href="index.html#video" class="w3-bar-item w3-button">Video</a>
+    <a href="index.html#gallery" class="w3-bar-item w3-button">Galerija</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button">Kontakti</a>
+    <a href="#tema" class="w3-bar-item w3-button">Individuālā tēma</a>
+  </div>
+</div>
+
+<!-- Hamburger izvēlne mazajiem ekrāniem -->
+<div class="w3-hide-large w3-hide-medium" style="margin-top:56px;">
+  <a href="javascript:void(0)" class="w3-button w3-black" onclick="toggleNav()" style="display:block; width:100%; text-align:center;">☰ Izvēlne</a>
+</div>
+
+<script>
+  function toggleNav() {
+    var x = document.getElementById("mobileNav");
+    if (x.className.indexOf("w3-show") === -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
+<!-- Sākuma galvene -->
+<header class="w3-container w3-blue w3-center" style="padding:128px 16px" id="home">
+  <h1 class="w3-margin w3-jumbo">Individuālā tēma</h1>
+  <p class="w3-xlarge">Detalizēta informācija par izvēlēto tēmu</p>
+</header>
+
+<!-- Galvenais saturs -->
+<div class="w3-container w3-padding-64" id="tema">
+  <div class="w3-row-padding" style="margin-top:32px">
+    <div class="w3-col m6">
+      <h2>Tēmas apraksts</h2>
+      <p>
+        Šajā sadaļā ir iekļauta detalizēta informācija par izvēlēto individuālo tēmu. Teksts ir strukturēts ar semantiskiem HTML tagiem, kas nodrošina dokumenta loģisku uzbūvi.
+      </p>
+    </div>
+    <div class="w3-col m6">
+      <h2>Plakāts vai animācija</h2>
+      <figure>
+        <img src="poster.jpg" alt="Tēmas plakāts" style="width:100%">
+        <figcaption>Tēmas plakāts</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- Izmantotie informācijas avoti -->
+<footer class="w3-container w3-black w3-center w3-padding-32">
+  <p>Izmantotie informācijas avoti:</p>
+  <p>
+    <a href="https://www.example.com/source1" target="_blank" class="w3-button w3-white">Avots 1</a>
+    <a href="https://www.example.com/source2" target="_blank" class="w3-button w3-white">Avots 2</a>
+    <a href="https://www.example.com/source3" target="_blank" class="w3-button w3-white">Avots 3</a>
+  </p>
+</footer>
+
 </body>
 </html>
