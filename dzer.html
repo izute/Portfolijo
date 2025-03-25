@@ -8,30 +8,40 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     /* Vispārējie fonti un noformējums */
-    body, h1, h2, h3, p, ul, li {
+    body, h1, h2, p, label, input {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    /* Konteineram, kas satur formu, pievienojam atbilstošu iekšējo atstarpi un fona krāsu */
+    /* Konteiners ar līdzīgu noformējumu kā iepriekšējās lapās */
     .custom-content {
       padding: 64px 16px;
       background-color: #f1f1f1;
+      min-height: 100vh;
     }
-    /* Centrējam saturu */
     .w3-center {
       text-align: center;
     }
     form {
       margin-top: 20px;
     }
-    /* Pielāgots stils radio pogām un atstarpēm */
+    /* Radio pogu stils */
     input[type="radio"] {
       margin: 8px;
     }
+    /* Poga */
     input[type="button"] {
       margin-top: 16px;
+      padding: 8px 16px;
+      background-color: #2196F3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    input[type="button"]:hover {
+      background-color: #1976D2;
     }
     #cena {
       font-weight: bold;
@@ -40,7 +50,6 @@
   </style>
 </head>
 <body>
-  <!-- Galvenais saturs bez galvenā uzraksta -->
   <div class="w3-container custom-content w3-center">
     <p class="w3-large">Izvēlies dzērienu:</p>
     <form>
@@ -61,7 +70,7 @@
         <label for="tēja">Tēja</label>
       </p>
       <p>
-        <input type="button" id="poga" class="w3-button w3-blue" value="Jāmaksā" onclick="maksa()">
+        <input type="button" id="poga" value="Jāmaksā" onclick="maksa()">
         <span id="cena"></span>
       </p>
     </form>
@@ -72,7 +81,7 @@
       let dz = document.getElementsByName('drink');
       for(let i = 0; i < dz.length; i++) {
          if(dz[i].checked)
-           document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";
+            document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";
       }
     }
   </script>
