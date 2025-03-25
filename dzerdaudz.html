@@ -85,7 +85,7 @@
       for(i = 0; i < dz.length - 1; i++) {
          if(dz[i].checked) sum += Number(dz[i].value);
       }
-      document.getElementById("maksa").innerHTML = "Jāmaksā " + sum;
+      document.getElementById("maksa").innerHTML = "Jāmaksā " + sum.toFixed(1);
     }
   </script>
 </body>
