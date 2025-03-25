@@ -22,65 +22,7 @@
     .w3-center {
       text-align: center;
     }
-    form {
-      margin-top: 20px;
-    }
-    /* Paragrāfu atstarpe */
-    p {
-      margin: 10px 0;
-    }
-    /* Ievadlauku un pogu stilizācija */
-    input[type="text"],
-    input[type="button"],
-    input[type="reset"] {
-      padding: 8px;
-      margin: 4px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    /* Specifiski lielāks datuma ievades lauks */
-    input[name="datums"] {
-      width: 300px;
-    }
-    input[type="button"] {
-      background-color: #2196F3;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    input[type="button"]:hover {
-      background-color: #1976D2;
-    }
-  </style>
-</head>
-<body>
-  <div class="w3-container custom-content w3-center">
-    <!-- Pirmā forma: Datuma ievade -->
-    <form>
-      <p>Šodienas datums: <input name="datums" type="text"></p>
-      <p>
-        Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
-        <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
-      </p>
-      <p>
-        Ja gribi izdzēst datuma lodziņa saturu, spied pogu RESET 
-        <input value="RESET" type="reset">
-      </p>
-    </form>
-    
-    <!-- Otrā forma: Kalkulators -->
-    <form name="calcForm">
-      <div>1. skaitlis: <input type="text" name="sk1"></div>
-      <div>2. skaitlis: <input type="text" name="sk2"></div>
-      <hr>
-      <div>
-        <input value="+" onclick="calcForm.rez.value=Number(calcForm.sk1.value)+Number(calcForm.sk2.value)" type="button">
-        <input value="-" onclick="calcForm.rez.value=Number(calcForm.sk1.value)-Number(calcForm.sk2.value)" type="button">
-        <input value="X" onclick="calcForm.rez.value=Number(calcForm.sk1.value)*Number(calcForm.sk2.value)" type="button">
-        <input value="/" onclick="calcForm.rez.value=Number(calcForm.sk1.value)/Number(calcForm.sk2.value)" type="button">
-        <input value="RESET" type="reset">
-      </div>
-      <hr>
+
       <div>Rezultāts: <input name="rez" type="text"></div>
     </form>
   </div>
