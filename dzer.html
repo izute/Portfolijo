@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <title>Mans datorikas portfolio - Dzērienu izvēle</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dzērienu izvēle</title>
   <!-- W3.CSS pamatbibliotēka -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-
+    /* Vispārējie fonti un noformējums */
     body, h1, h2, h3, p, ul, li {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    /* Konteiners ar līdzīgu noformējumu kā iepriekšējā lapā */
     .custom-content {
       padding: 64px 16px;
       background-color: #f1f1f1;
     }
-  
     .w3-center {
       text-align: center;
     }
     form {
       margin-top: 20px;
     }
-    /* Pielāgots stils checkbox elementiem un atstarpēm */
+    /* Stilizējam checkboxes un pogas */
     input[type="checkbox"] {
       margin: 8px;
     }
@@ -40,45 +39,48 @@
   </style>
 </head>
 <body>
+  <!-- Galvenais saturs (bez galvenā uzraksta) -->
   <div class="w3-container custom-content w3-center">
     <p class="w3-large">Izvēlies dzērienus:</p>
     <form>
       <p>
         <input type="checkbox" id="kafija" name="drink" value="3.60">
-        <label for="kafija">Kafija (3.60 EUR)</label>
+        <label for="kafija">Kafija</label>
       </p>
       <p>
         <input type="checkbox" id="sula" name="drink" value="2.50">
-        <label for="sula">Sula (2.50 EUR)</label>
+        <label for="sula">Sula</label>
       </p>
       <p>
         <input type="checkbox" id="kakao" name="drink" value="3.20">
-        <label for="kakao">Kakao (3.20 EUR)</label>
+        <label for="kakao">Kakao</label>
       </p>
       <p>
-        <input type="checkbox" id="tēja" name="drink" value="2.10">
-        <label for="tēja">Tēja (2.10 EUR)</label>
+        <input type="checkbox" id="teja" name="drink" value="2.10">
+        <label for="teja">Tēja</label>
       </p>
       <p>
-        <input type="button" id="poga" class="w3-button w3-blue" value="Aprēķināt cenu" onclick="maksa()">
+        <input type="button" id="poga" class="w3-button w3-blue" value="Jāmaksā" onclick="maksa()">
         <span id="cena"></span>
       </p>
     </form>
   </div>
-
+  
   <script>
     function maksa(){
-      let checkboxes = document.getElementsByName('drink');
+      let dz = document.getElementsByName('drink');
       let total = 0;
-      for(let i = 0; i < checkboxes.length; i++){
-         if(checkboxes[i].checked){
-             total += parseFloat(checkboxes[i].value);
-         }
+      for(let i = 0; i < dz.length; i++){
+        if(dz[i].checked){
+          total += parseFloat(dz[i].value);
+        }
       }
       document.getElementById("cena").innerText = "Cena: " + total.toFixed(2) + " EUR";
     }
   </script>
 </body>
+</html>
+
 </html>
 
 
