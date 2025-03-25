@@ -38,6 +38,10 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+    /* Specifiski lielāks datuma ievades lauks */
+    input[name="datums"] {
+      width: 300px;
+    }
     input[type="button"] {
       background-color: #2196F3;
       color: #fff;
@@ -47,16 +51,10 @@
     input[type="button"]:hover {
       background-color: #1976D2;
     }
-    /* Checkboxu stilizācija */
-    input[type="checkbox"] {
-      margin-right: 8px;
-    }
   </style>
 </head>
 <body>
   <div class="w3-container custom-content w3-center">
-    <!-- Galvenais uzraksts tiek izlaists, kā prasīts -->
-    
     <!-- Pirmā forma: Datuma ievade -->
     <form>
       <p>Šodienas datums: <input name="datums" type="text"></p>
