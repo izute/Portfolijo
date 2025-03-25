@@ -14,19 +14,20 @@
       padding: 0;
       box-sizing: border-box;
     }
-    /* Konteiners ar līdzīgu noformējumu kā iepriekšējā lapā */
+    /* Konteineram, kas satur formu, pievienojam atbilstošu iekšējo atstarpi un fona krāsu */
     .custom-content {
       padding: 64px 16px;
       background-color: #f1f1f1;
     }
+    /* Centrējam saturu */
     .w3-center {
       text-align: center;
     }
     form {
       margin-top: 20px;
     }
-    /* Stilizējam checkboxes un pogas */
-    input[type="checkbox"] {
+    /* Pielāgots stils radio pogām un atstarpēm */
+    input[type="radio"] {
       margin: 8px;
     }
     input[type="button"] {
@@ -39,25 +40,25 @@
   </style>
 </head>
 <body>
-  <!-- Galvenais saturs (bez galvenā uzraksta) -->
+  <!-- Galvenais saturs bez galvenā uzraksta -->
   <div class="w3-container custom-content w3-center">
-    <p class="w3-large">Izvēlies dzērienus:</p>
+    <p class="w3-large">Izvēlies dzērienu:</p>
     <form>
       <p>
-        <input type="checkbox" id="kafija" name="drink" value="3.60">
+        <input type="radio" id="kafija" name="drink" value="3.60">
         <label for="kafija">Kafija</label>
       </p>
       <p>
-        <input type="checkbox" id="sula" name="drink" value="2.50">
+        <input type="radio" id="sula" name="drink" value="2.50">
         <label for="sula">Sula</label>
       </p>
       <p>
-        <input type="checkbox" id="kakao" name="drink" value="3.20">
+        <input type="radio" id="kakao" name="drink" value="3.20">
         <label for="kakao">Kakao</label>
       </p>
       <p>
-        <input type="checkbox" id="teja" name="drink" value="2.10">
-        <label for="teja">Tēja</label>
+        <input type="radio" id="tēja" name="drink" value="2.10">
+        <label for="tēja">Tēja</label>
       </p>
       <p>
         <input type="button" id="poga" class="w3-button w3-blue" value="Jāmaksā" onclick="maksa()">
@@ -69,18 +70,11 @@
   <script>
     function maksa(){
       let dz = document.getElementsByName('drink');
-      let total = 0;
-      for(let i = 0; i < dz.length; i++){
-        if(dz[i].checked){
-          total += parseFloat(dz[i].value);
-        }
+      for(let i = 0; i < dz.length; i++) {
+         if(dz[i].checked)
+           document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";
       }
-      document.getElementById("cena").innerText = "Cena: " + total.toFixed(2) + " EUR";
     }
   </script>
 </body>
 </html>
-
-</html>
-
-
