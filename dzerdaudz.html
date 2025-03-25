@@ -5,6 +5,13 @@
   <title>Dzērienu izvēle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="htt<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Dzērienu izvēle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- W3.CSS pamatbibliotēka -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     /* Vispārējie fonti un noformējums */
@@ -85,7 +92,7 @@
       for(i = 0; i < dz.length - 1; i++) {
          if(dz[i].checked) sum += Number(dz[i].value);
       }
-      document.getElementById("maksa").innerHTML = "Jāmaksā " + sum.toFixed(1);
+      document.getElementById("maksa").innerHTML = "Jāmaksā " + sum.toFixed(1).replace(".", ",");
     }
   </script>
 </body>
