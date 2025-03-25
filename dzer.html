@@ -1,28 +1,81 @@
-
 <!DOCTYPE html>
-<html>
-<body>
-<script>
-function maksa(){
-    let dz = document.getElementsByName('drink');
-    for(i = 0; i < dz.length; i++) {
-       if(dz[i].checked)
-       document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dzērienu izvēle</title>
+  <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Vispārējie fonti un noformējums */
+    body, h1, h2, h3, p, ul, li {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
- }   
-</script>
-<p>Izvēlies dzērienu:</p>
-<form>
-  <input type="radio" id="kafija" name="drink" value="3.60">
-  <label for="kafija">kafija</label><br>
-  <input type="radio" id="sula" name="drink" value="2.50">
-  <label for="sula">sula</label><br>
-  <input type="radio" id="kakao" name="drink" value="3.20">
-  <label for="kakao">kakao</label><br>
-  <input type="radio" id="tēja" name="drink" value="2.10">
-  <label for="tēja">tēja</label><br>
-  <input type="button" id="poga" value="jāmaksā" onclick="maksa()">
-  <span id="cena"></span>
-</form> 
+    /* Konteineram, kas satur formu, pievienojam atbilstošu iekšējo atstarpi un fona krāsu */
+    .custom-content {
+      padding: 64px 16px;
+      background-color: #f1f1f1;
+    }
+    /* Centrējam saturu */
+    .w3-center {
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    /* Pielāgots stils radio pogām un atstarpēm */
+    input[type="radio"] {
+      margin: 8px;
+    }
+    input[type="button"] {
+      margin-top: 16px;
+    }
+    #cena {
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Galvenais saturs bez galvenā uzraksta -->
+  <div class="w3-container custom-content w3-center">
+    <p class="w3-large">Izvēlies dzērienu:</p>
+    <form>
+      <p>
+        <input type="radio" id="kafija" name="drink" value="3.60">
+        <label for="kafija">Kafija</label>
+      </p>
+      <p>
+        <input type="radio" id="sula" name="drink" value="2.50">
+        <label for="sula">Sula</label>
+      </p>
+      <p>
+        <input type="radio" id="kakao" name="drink" value="3.20">
+        <label for="kakao">Kakao</label>
+      </p>
+      <p>
+        <input type="radio" id="tēja" name="drink" value="2.10">
+        <label for="tēja">Tēja</label>
+      </p>
+      <p>
+        <input type="button" id="poga" class="w3-button w3-blue" value="Jāmaksā" onclick="maksa()">
+        <span id="cena"></span>
+      </p>
+    </form>
+  </div>
+  
+  <script>
+    function maksa(){
+      let dz = document.getElementsByName('drink');
+      for(let i = 0; i < dz.length; i++) {
+         if(dz[i].checked)
+           document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";
+      }
+    }
+  </script>
 </body>
 </html>
+
