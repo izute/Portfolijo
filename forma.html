@@ -1,28 +1,35 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formas</title>
+    <link href="css/stils.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-<script>
-function maksa(){
-	let dz = document.getElementsByTagName('input');
-    let sum=0;
-    for(i = 0; i < dz.length-1; i++) {
-       if(dz[i].checked) sum+=Number(dz[i].value);
-    }
-    document.getElementById("maksa").innerHTML="Jāmaksā "+sum;
- }   
-</script>
-<p id="maksa"></p>
-<form>
-  <input type="checkbox" id="kafija" name="kafija" value="3.60">
-  <label for="kafija">kafija</label><br>
-  <input type="checkbox" id="sula"  name="sula" value="2.50">
-  <label for="sula">sula</label><br>
-  <input type="checkbox" id="kakao" name="kakao" value="3.20">
-  <label for="kakao">kakao</label><br>
-  <input type="checkbox" id="teeja" name="teeja" value="2.10">
-  <label for="teeja">tēja</label><br><br>
-  <input type="button" id="poga" value="jāmaksā" onclick="maksa()">
-</form> 
+    <h1>Formas un ievadlauku piemērs</h1>
+    <form>
+        <p>Šodienas datums <input name="datums"></p>
+        <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
+            <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
+        </p>
+        <p>Ja gribi izdzēst datumua lodziņa saturu, spied pogu RESET
+            <input value="RESET" type="reset">
+        </p>
+    </form>
+    <form name="calcForm">
+        <div>1.skaitlis <input type="text" name="sk1"> </div>
+        <div>2.skaitlis <input type="text" name="sk2"> </div>
+        <hr>
+        <div>
+            <input value="+" onclick="calcForm.rez.value=Number(calcForm.sk1.value)+Number(calcForm.sk2.value)" type="button">
+            <input value="-" onclick="calcForm.rez.value=Number(calcForm.sk1.value)-Number(calcForm.sk2.value)" type="button">
+            <input value="X" onclick="calcForm.rez.value=Number(calcForm.sk1.value)*Number(calcForm.sk2.value)" type="button">
+            <input value="/" onclick="calcForm.rez.value=Number(calcForm.sk1.value)/Number(calcForm.sk2.value)" type="button">
+            <input value="RESET" type="reset">
+        </div>
+        <hr>
+        <div>Rezultāts <input name="rez"> </div>
+    </form>
 </body>
 </html>
