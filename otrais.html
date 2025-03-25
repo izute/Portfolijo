@@ -3,76 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Individuālā tēma - Otrais Dokuments</title>
+  <title>Individuālā tēma - Portfolio</title>
   <style>
-    /* Pamata stils navigācijas paneļa un vizuālā materiāla izvietošanai */
+    /* Konteinera stils, lai saturs būtu centrēts */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* Stils navigācijas paneļam */
     nav ul {
       list-style: none;
       display: flex;
       gap: 15px;
       padding: 0;
+      margin: 0;
     }
     nav ul li a {
       text-decoration: none;
       color: #000;
     }
+    /* Vizuālā materiāla stils */
     .visual {
       max-width: 100%;
       height: auto;
     }
+    /* Pamata teksta stils */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
-      padding: 0 20px;
+      padding: 0;
     }
     header, footer, main {
       margin-bottom: 20px;
     }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    footer ul li {
+      margin-bottom: 5px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Individuālā tēma</h1>
-    <nav>
-      <ul>
-        <!-- Norāde uz teksta sadaļu zemāk dokumentā -->
-        <li><a href="#tema">Tēmas apraksts</a></li>
-        <!-- Citas norādes uz index.html dokumenta atbilstošām nodaļām -->
-        <li><a href="images/reklama datorika.MP4">Video</a></li>
-        <li><a href="index.html#gallery">Galerija</a></li>
-        <li><a href="index.html#contact">Kontakti</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Sekcija ar detalizētu informāciju par individuālo tēmu -->
-    <section id="tema">
-      <article>
-        <h2>Tēmas apraksts</h2>
-        <p>
-          Šajā sadaļā ir iekļauta detalizēta informācija par izvēlēto individuālo tēmu. Informācija ir strukturēta ar atbilstošiem HTML tagiem, kas palīdz nodrošināt semantisku dokumenta struktūru.
-        </p>
-      </article>
-      <article>
-        <h2>Plakāts vai animācija</h2>
-        <figure>
-          <!-- Vizuāls materiāls – šeit var ievietot plakātu vai animāciju -->
-          <img src="poster.jpg" alt="Tēmas plakāts" class="visual">
-          <figcaption>Tēmas plakāts</figcaption>
-        </figure>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <p>Izmantotie informācijas avoti:</p>
-    <ul>
-      <li><a href="https://www.example.com/source1" target="_blank">Avots 1</a></li>
-      <li><a href="https://www.example.com/source2" target="_blank">Avots 2</a></li>
-      <li><a href="https://www.example.com/source3" target="_blank">Avots 3</a></li>
-    </ul>
-  </footer>
-</body>
-</html>
+  <div class="container">
+    <header>
+      <h1>Individuālā tēma
