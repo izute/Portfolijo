@@ -14,8 +14,7 @@
   <!-- 3. Forma -->
   <form>
     <!-- 4. Teksts formā -->
-    <p>Ievadi pilnu datumu, kad tev būs tuvākā dzimšanas diena.<br>
-    (Lūdzu, ievadi mēnesi un dienu – gadu var ievadīt jebkuru, jo tā netiek izmantots aprēķinā.)</p>
+    <p>Ievadi pilnu datumu, kad tev būs tuvākā dzimšanas diena.<br></p>
 
     <!-- 5. Teksts "gads" un ievades lauks -->
     <label>gads</label>
@@ -33,7 +32,7 @@
     <br>
 
     <!-- 8. Poga ar atribūtu onclick -->
-    <input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas();">
+    <input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="Dienas();">
     <br><br>
 
     <!-- 9. Teksts -->
@@ -46,7 +45,7 @@
 
   <!-- 13. Script tags ar funkciju dienas() -->
   <script>
-    function dienas() {
+    function Dienas() {
       // Iegūstam ievades vērtības un pārvēršam tās par skaitļiem.
       // Ievadītais gads netiek izmantots aprēķinā, jo mēs strādājam ar šodienas gadu.
       var menesis = parseInt(document.getElementsByName("menesis")[0].value, 10) - 1; // JavaScript mēneši sākas ar 0.
