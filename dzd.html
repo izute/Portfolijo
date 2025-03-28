@@ -3,44 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <title>Gaidot dzimšanas dienu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Vispārējie fonti un noformējums */
+    body, h1, h2, h3, p, ul, li {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Konteiners ar līdzīgu noformējumu kā iepriekšējā lapā */
+    .custom-content {
+      padding: 64px 16px;
+      background-color: #f1f1f1;
+      min-height: 100vh;
+    }
+    /* Centrējam saturu */
+    .w3-center {
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    /* Paragrāfu atstarpe */
+    p {
+      margin: 10px 0;
+    }
+    /* Ievadlauku un pogu stilizācija */
+    input[type="text"],
+    input[type="button"],
+    input[type="reset"] {
+      padding: 8px;
+      margin: 4px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="button"] {
+      background-color: #2196F3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="button"]:hover {
+      background-color: #1976D2;
+    }
+  </style>
 </head>
 <body>
-  <!-- 1. Virsraksts -->
-  <h1>Gaidot dzimšanas dienu</h1>
-
-  <!-- 2. Horizontāla līnija -->
-  <hr>
-
-  <!-- 3. Forma -->
-  <form>
-    <!-- 4. Teksts formā -->
-    <p>Ievadi pilnu datumu, kad tev būs tuvākā dzimšanas diena.<br></p>
-
-    <!-- 5. Teksts "gads" un ievades lauks -->
-    <label>gads</label>
-    <input type="text" name="gads">
-    <br>
-
-    <!-- 6. Teksts "mēnesis" un ievades lauks -->
-    <label>mēnesis</label>
-    <input type="text" name="menesis">
-    <br>
-
-    <!-- 7. Teksts "diena" un ievades lauks -->
-    <label>diena</label>
-    <input type="text" name="datums">
-    <br>
-
-    <!-- 8. Poga ar atribūtu onclick -->
-    <input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="Dienas();">
-    <br><br>
-
-    <!-- 9. Teksts un rezultāta rādīšana -->
-    <p>
-      Līdz svētkiem atlikušas <span id="dienas"></span> dienas : ))
-    </p>
-  </form>
-
+  <div class="w3-container custom-content w3-center">
+    <!-- 1. Virsraksts -->
+    <h1>Gaidot dzimšanas dienu</h1>
+    <!-- 2. Horizontāla līnija -->
+    <hr>
+    <!-- 3. Forma -->
+    <form>
+      <!-- 4. Teksts formā -->
+      <p>Ievadi pilnu datumu, kad tev būs tuvākā dzimšanas diena.<br></p>
+      <!-- 5. Teksts "gads" un ievades lauks -->
+      <label>gads</label>
+      <input type="text" name="gads">
+      <br>
+      <!-- 6. Teksts "mēnesis" un ievades lauks -->
+      <label>mēnesis</label>
+      <input type="text" name="menesis">
+      <br>
+      <!-- 7. Teksts "diena" un ievades lauks -->
+      <label>diena</label>
+      <input type="text" name="datums">
+      <br>
+      <!-- 8. Poga ar atribūtu onclick -->
+      <input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="Dienas();">
+      <br><br>
+      <!-- 9. Teksts un rezultāta rādīšana -->
+      <p>
+        Līdz svētkiem atlikušas <span id="dienas"></span> dienas : ))
+      </p>
+    </form>
+  </div>
+  
   <!-- 13. Script tags ar funkciju Dienas() -->
   <script>
     function Dienas() {
@@ -48,26 +90,25 @@
       // Ievadītais gads netiek izmantots aprēķinā, jo mēs strādājam ar šodienas gadu.
       var menesis = parseInt(document.getElementsByName("menesis")[0].value, 10) - 1; // JavaScript mēneši sākas ar 0.
       var datums = parseInt(document.getElementsByName("datums")[0].value, 10);
-
+      
       // Iegūstam šodienas datumu.
       var today = new Date();
-
+      
       // Izveidojam datumu, izmantojot šodienas gadu un ievadīto mēnesi un dienu.
       var birthday = new Date(today.getFullYear(), menesis, datums);
-
+      
       // Ja šī dzimšanas diena jau ir pagājusi šogad, tad aprēķinām nākamo dzimšanas dienu nākamajā gadā.
       if (birthday < today) {
         birthday.setFullYear(today.getFullYear() + 1);
       }
-
+      
       // Aprēķinām starpību milisekundēs un pārvēršam to dienās.
       var diffTime = birthday - today;
       var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
+      
       // Parādām rezultātu span elementā ar id "dienas".
       document.getElementById("dienas").innerText = diffDays;
     }
   </script>
 </body>
 </html>
-
