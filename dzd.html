@@ -49,9 +49,9 @@
   <script>
     function dienas() {
       // Iegūstam ievades vērtības un pārvēršam tās par skaitļiem
-      var gads = parseInt(document.getElementsByName("gads")[0].value, 10);
-      var menesis = parseInt(document.getElementsByName("menesis")[0].value, 10) - 1; // JavaScript mēneši sākas ar 0
-      var datums = parseInt(document.getElementsByName("datums")[0].value, 10);
+      var gads = parseInt(document.getElementsByName("gads")[0].value, 2026);
+      var menesis = parseInt(document.getElementsByName("menesis")[0].value, 12) - 1; // JavaScript mēneši sākas ar 0
+      var datums = parseInt(document.getElementsByName("datums")[0].value, 31);
 
       // Iegūstam šodienas datumu
       var today = new Date();
