@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-<meta charset="UTF-8">
-<title>Gaidot dzimšanas dienu</title>
+  <meta charset="UTF-8">
+  <title>Gaidot dzimšanas dienu</title>
 </head>
 <body>
-<!-- 1. Virsraksts -->
-<h1>Gaidot dzimšanas dienu</h1>
+  <!-- 1. Virsraksts -->
+  <h1>Gaidot dzimšanas dienu</h1>
 
-<!-- 2. Horizontāla līnija -->
-<hr>
+  <!-- 2. Horizontāla līnija -->
+  <hr>
 
-<!-- 3. Forma -->
-<form>
-<!-- 4. Teksts formā -->
-<p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
+  <!-- 3. Forma -->
+  <form>
+    <!-- 4. Teksts formā -->
+    <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
 
-<!-- 5. Teksts "gads" un ievades lauks -->
-<label>gads</label>
-<input type="text" name="gads">
-<br>
+    <!-- 5. Teksts "gads" un ievades lauks -->
+    <label>gads</label>
+    <input type="text" name="gads">
+    <br>
 
-<!-- 6. Teksts "mēnesis" un ievades lauks -->
-<label>mēnesis</label>
-<input type="text" name="menesis">
-<br>
+    <!-- 6. Teksts "mēnesis" un ievades lauks -->
+    <label>mēnesis</label>
+    <input type="text" name="menesis">
+    <br>
 
-<!-- 7. Teksts "diena" un ievades lauks -->
-<label>diena</label>
-<input type="text" name="datums">
-<br>
+    <!-- 7. Teksts "diena" un ievades lauks -->
+    <label>diena</label>
+    <input type="text" name="datums">
+    <br>
 
-<!-- 8. Poga ar atribūtu onclick -->
-<input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" ;">
-<br><br>
+    <!-- 8. Poga ar atribūtu onclick -->
+    <input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas();">
+    <br><br>
 
-<!-- 9. Teksts -->
-Līdz svētkiem atlikušas
-<!-- 10. Forma lauks "dienas" -->
-<input type="text" name="dienas" onclick="dienas();">
-<!-- 11. Teksts -->
-dienas : ))
-</form>
+    <!-- 9. Teksts -->
+    <p>Līdz svētkiem atlikušas</p>
 
-<!-- 13. Script tags ar funkciju dienas() -->
-<script>
-function dienas() {
-// Iegūstam ievades vērtības un pārvēršam tās par skaitļiem
-var gads = parseInt(document.getElementsByName("gads")[0].value, 10);
-var menesis = parseInt(document.getElementsByName("menesis")[0].value, 10) - 1; // JavaScript mēneši sākas ar 0
-var datums = parseInt(document.getElementsByName("datums")[0].value, 10);
+    <!-- 10. Forma lauks "dienas" -->
+    <input type="text" name="dienas">
+    
+    <!-- 11. Teksts -->
+    <p>dienas : ))</p>
+  </form>
 
-// Iegūstam šodienas datumu
-var today = new Date();
+  <!-- 13. Script tags ar funkciju dienas() -->
+  <script>
+    function dienas() {
+      // Iegūstam ievades vērtības un pārvēršam tās par skaitļiem
+      var gads = parseInt(document.getElementsByName("gads")[0].value, 10);
+      var menesis = parseInt(document.getElementsByName("menesis")[0].value, 10) - 1; // JavaScript mēneši sākas ar 0
+      var datums = parseInt(document.getElementsByName("datums")[0].value, 10);
 
-// Izveidojam datumu no ievades vērtībām
-var birthday = new Date(gads, menesis, datums);
+      // Iegūstam šodienas datumu
+      var today = new Date();
 
-// Ja ievadītais datums jau ir pagājis, tad pievienojam 1 gadu, lai iegūtu nākamo dzimšanas dienu
-if (birthday < today) {
-birthday.setFullYear(today.getFullYear() + 1);
-}
+      // Izveidojam datumu no ievades vērtībām
+      var birthday = new Date(gads, menesis, datums);
 
-// Aprēķinām starpību milisekundēs un pārvēršam dienās
-var diffTime = birthday - today;
-var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      // Ja ievadītais datums jau ir pagājis, tad pievienojam 1 gadu, lai iegūtu nākamo dzimšanas dienu
+      if (birthday < today) {
+        birthday.setFullYear(today.getFullYear() + 1);
+      }
 
-// Parādām rezultātu formas laukā "dienas"
-document.getElementsByName("dienas")[0].value = diffDays;
-}
-</script>
+      // Aprēķinām starpību milisekundēs un pārvēršam dienās
+      var diffTime = birthday - today;
+      var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      // Parādām rezultātu formas laukā "dienas"
+      document.getElementsByName("dienas")[0].value = diffDays;
+    }
+  </script>
 </body>
 </html>
