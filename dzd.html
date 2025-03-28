@@ -14,7 +14,8 @@
   <!-- 3. Forma -->
   <form>
     <!-- 4. Teksts formā -->
-    <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
+    <p>Ievadi pilnu datumu, kad tev būs tuvākā dzimšanas diena.<br>
+    (Lūdzu, ievadi mēnesi un dienu – gadu var ievadīt jebkuru, jo tā netiek izmantots aprēķinā.)</p>
 
     <!-- 5. Teksts "gads" un ievades lauks -->
     <label>gads</label>
@@ -36,41 +37,40 @@
     <br><br>
 
     <!-- 9. Teksts -->
-    <p>Līdz svētkiem atlikušas</p>
-
+    Līdz svētkiem atlikušas
     <!-- 10. Forma lauks "dienas" -->
     <input type="text" name="dienas">
-    
     <!-- 11. Teksts -->
-    <p>dienas : ))</p>
+    dienas : ))
   </form>
 
   <!-- 13. Script tags ar funkciju dienas() -->
   <script>
     function dienas() {
-      // Iegūstam ievades vērtības un pārvēršam tās par skaitļiem
-      var gads = parseInt(document.getElementsByName("gads")[0].value, 2026);
-      var menesis = parseInt(document.getElementsByName("menesis")[0].value, 12) - 1; // JavaScript mēneši sākas ar 0
-      var datums = parseInt(document.getElementsByName("datums")[0].value, 31);
+      // Iegūstam ievades vērtības un pārvēršam tās par skaitļiem.
+      // Ievadītais gads netiek izmantots aprēķinā, jo mēs strādājam ar šodienas gadu.
+      var menesis = parseInt(document.getElementsByName("menesis")[0].value, 10) - 1; // JavaScript mēneši sākas ar 0.
+      var datums = parseInt(document.getElementsByName("datums")[0].value, 10);
 
-      // Iegūstam šodienas datumu
+      // Iegūstam šodienas datumu.
       var today = new Date();
 
-      // Izveidojam datumu no ievades vērtībām
-      var birthday = new Date(gads, menesis, datums);
+      // Izveidojam datumu, izmantojot šodienas gadu un ievadīto mēnesi un dienu.
+      var birthday = new Date(today.getFullYear(), menesis, datums);
 
-      // Ja ievadītais datums jau ir pagājis, tad pievienojam 1 gadu, lai iegūtu nākamo dzimšanas dienu
+      // Ja šī dzimšanas diena jau ir pagājusi šogad, tad aprēķinām nākamo dzimšanas dienu nākamajā gadā.
       if (birthday < today) {
         birthday.setFullYear(today.getFullYear() + 1);
       }
 
-      // Aprēķinām starpību milisekundēs un pārvēršam dienās
+      // Aprēķinām starpību milisekundēs un pārvēršam to dienās.
       var diffTime = birthday - today;
       var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-      // Parādām rezultātu formas laukā "dienas"
+      // Parādām rezultātu formas laukā "dienas".
       document.getElementsByName("dienas")[0].value = diffDays;
     }
   </script>
 </body>
 </html>
+
