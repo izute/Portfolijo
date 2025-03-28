@@ -35,15 +35,13 @@
     <input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="Dienas();">
     <br><br>
 
-    <!-- 9. Teksts -->
-    Līdz svētkiem atlikušas
-    <!-- 10. Forma lauks "dienas" -->
-    <input type="text" name="dienas">
-    <!-- 11. Teksts -->
-    dienas : ))
+    <!-- 9. Teksts un rezultāta rādīšana -->
+    <p>
+      Līdz svētkiem atlikušas <span id="dienas"></span> dienas : ))
+    </p>
   </form>
 
-  <!-- 13. Script tags ar funkciju dienas() -->
+  <!-- 13. Script tags ar funkciju Dienas() -->
   <script>
     function Dienas() {
       // Iegūstam ievades vērtības un pārvēršam tās par skaitļiem.
@@ -66,8 +64,8 @@
       var diffTime = birthday - today;
       var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-      // Parādām rezultātu formas laukā "dienas".
-      document.getElementsByName("dienas")[0].value = diffDays;
+      // Parādām rezultātu span elementā ar id "dienas".
+      document.getElementById("dienas").innerText = diffDays;
     }
   </script>
 </body>
