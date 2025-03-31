@@ -82,17 +82,41 @@
         </script>
       </div>
     </div>
-    <!-- Mobilā navigācija -->
-    <div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="width: 100%;">
-      <a href="#home" class="w3-bar-item w3-button">Sākums</a>
-      <a href="#temas" class="w3-bar-item w3-button">1. un 2. semestra tēmas</a>
-      <a href="#gimp" class="w3-bar-item w3-button">GIMP darbi</a>
-      <a href="#modelesana" class="w3-bar-item w3-button">3D modelēšana</a>
-      <a href="#msword" class="w3-bar-item w3-button">MS Word</a>
-      <a href="#video" class="w3-bar-item w3-button">Video projekts</a>
-      <a href="#msexcel" class="w3-bar-item w3-button">MS Excel</a>
-      <a href="otrais.html" class="w3-bar-item w3-button">Individuālā tēma</a>
-    </div>
+
+  <!-- Mobilā navigācija -->
+  <div class="w3-container w3-hide-large w3-hide-medium" style="margin-top:56px;">
+    <!-- Citi navigācijas elementi (ja nepieciešams) -->
+    <a href="#home" class="w3-button w3-black" style="display:block; width:100%;">Sākums</a>
+    <a href="#temas" class="w3-button w3-black" style="display:block; width:100%;">1. un 2. semestra tēmas</a>
+    <a href="#gimp" class="w3-button w3-black" style="display:block; width:100%;">GIMP darbi</a>
+    <a href="#modelesana" class="w3-button w3-black" style="display:block; width:100%;">3D modelēšana</a>
+    <a href="#msword" class="w3-button w3-black" style="display:block; width:100%;">MS Word</a>
+    <a href="#video" class="w3-button w3-black" style="display:block; width:100%;">Video projekts</a>
+    <a href="#msexcel" class="w3-button w3-black" style="display:block; width:100%;">MS Excel</a>
+    <a href="otrais.html" class="w3-button w3-black" style="display:block; width:100%;">Individuālā tēma</a>
+    <!-- Atsevišķa poga "Pārējās lapas" mobilajai navigācijai -->
+    <a href="javascript:void(0)" class="w3-button w3-black" style="display:block; width:100%;" onclick="toggleDropdownMobile()">Pārējās lapas</a>
+    <ul id="mobileDropdown" class="dropdown" style="display: none;">
+      <li><a href="dzerdaudz.html">Dzerdaudz.html</a></li>
+      <li><a href="forma.html">Forma.html</a></li>
+      <li><a href="dzer.html">Dzer.html</a></li>
+      <li><a href="skola.html">Skola.html</a></li>
+      <li><a href="dzd.html">Dzd.html</a></li>
+      <li><a href="mērvienības.html">Mērvienības.html</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleDropdownMobile() {
+      var mobileMenu = document.getElementById("mobileDropdown");
+      if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+        mobileMenu.style.display = "block";
+      } else {
+        mobileMenu.style.display = "none";
+      }
+    }
+    // Ja nepieciešams arī desktop versijā, var izveidot toggle funkciju.
+  </script>
   </div>
 
   <!-- Sākuma galvene -->
