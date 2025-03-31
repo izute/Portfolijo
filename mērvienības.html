@@ -1,1 +1,59 @@
 <!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Ciparu fona piemērs</title>
+  <style>
+    /* Pamatstils lapas fonam */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Lapas fona krāsa (gaiši pelēka vai balta) */
+      background-color: #fafafa;
+      /* Fona attēls */
+      background-image: url("cipari.jpg");
+      /* Atkārtojam attēlu horizontāli un vertikāli */
+      background-repeat: repeat;
+      /* Attēla izmēru var atstāt automātisku vai pielāgot */
+      background-size: auto;
+      /* Var pievienot papildu caurspīdīguma efektu, ja nepieciešams
+         (piemēram, izmantojot pseidoelementus vai citu paņēmienu) */
+    }
+
+    /* Izvēles piemērs virsrakstam, lai tas būtu centrēts utt. */
+    h1 {
+      text-align: center;
+      padding: 20px;
+      /* Var pievienot gaišu fona laukumu, lai cipari neradītu traucējumus */
+      background-color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+
+    /* Piemērs satura konteineram, ja vēlaties teksta bloku */
+    .content {
+      width: 60%;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ciparu fona piemērs</h1>
+
+  <div class="content">
+    <p>
+      Šeit var atrasties lapas saturs. Fons atkārtojas, izmantojot
+      <em>cipari.jpg</em> attēlu, radot vieglu, gaišu “ūdenszīmes” iespaidu
+      ar cipariem “1001 0010” vai tamlīdzīgu bināro rakstu.
+    </p>
+    <p>
+      Ja vēlaties, lai cipari būtu vēl maigāki, var koriģēt attēlu
+      (piemēram, izmantojot attēlu apstrādes programmu) vai pievienot
+      papildu efektus, izmantojot CSS pseidoelementus.
+    </p>
+  </div>
+</body>
+</html>
+
