@@ -77,47 +77,7 @@
     <a href="#video" class="w3-bar-item w3-button">Video projekts</a>
     <a href="#msexcel" class="w3-bar-item w3-button">MS Excel</a>
     <a href="otrais.html" class="w3-bar-item w3-button">Inviduālā tēma</a>
-    <div class="w3-container">
-    <!-- Poga, kas pārslēdz dropdown sarakstu -->
-    <a href="javascript:void(0)" class="w3-button w3-black" onclick="toggleDropdown()">Pārējās lapas</a>
-    
-    <!-- Dropdown saraksts, sākotnēji paslēpts -->
-    <ul id="dropdownMenu" class="dropdown" style="display: none;">
-      <li><a href="dzerdaudz.html">Dzerdaudz.html</a></li>
-      <li><a href="forma.html">Forma.html</a></li>
-      <li><a href="dzer.html">Dzer.html</a></li>
-      <li><a href="skola.html">Skola.html</a></li>
-      <li><a href="dzd.html">Dzd.html</a></li>
-      <li><a href="mērvienības.html">Mērvienības.html</a></li>
-    </ul>
-	   <script>
-  function toggleDropdown() {
-    var menu = document.getElementById("dropdownMenu");
-    if (menu.style.display === "none" || menu.style.display === "") {
-      menu.style.display = "block";
-    } else {
-      menu.style.display = "none";
-    }
-  }
-</script>
-  </div>
-</div>
 
-<!-- Hamburger izvēlne mazajiem ekrāniem -->
-<div class="w3-hide-large w3-hide-medium" style="margin-top:56px;">
-  <a href="javascript:void(0)" class="w3-button w3-black" onclick="toggleNav()" style="display:block; width:100%; text-align:center;">☰ Izvēlne</a>
-</div>
-
-<script>
-  function toggleNav() {
-    var x = document.getElementById("mobileNav");
-    if (x.className.indexOf("w3-show") === -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-</script>
 
 <!-- Sākuma galvene -->
 <header class="w3-container w3-blue w3-center" style="padding:128px 16px" id="home">
