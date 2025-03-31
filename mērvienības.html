@@ -1,78 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <meta charset="UTF-8">
-  <title>Informācijas daudzuma mērvienības</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- W3.CSS pamatbibliotēka -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <style>
-    /* Dokumenta fona attēls */
-    body {
-      background-image: url('cipari.jpg');
-      background-repeat: repeat;
-    }
-    /* Formas stils */
-    .custom-form {
-      background-color: rgb(220,220,0);
-      padding: 20px;
-      font-size: 20px;
-      max-width: 600px;
-      margin: 40px auto;
-      border-radius: 8px;
-    }
-    .custom-form p {
-      margin-bottom: 20px;
-    }
-    .custom-form input[type="text"] {
-      padding: 8px;
-      margin-top: 8px;
-      width: 80%;
-      font-size: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .custom-form input[type="button"] {
-      padding: 10px 20px;
-      background-color: #2196F3;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    .custom-form input[type="button"]:hover {
-      background-color: #1976D2;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            position: relative;
+  flex: 1;
+  background: url('images/cipari.jpg') repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 20px;
+        }
+        body* {
+  position: relative;
+  z-index: 1;
+}
+        h1 {
+            font-weight: bold;
+        }
+        form {
+            font-size: 20px;
+            background-color: rgb(220, 220, 0);
+            padding: 20px;
+            width: 500px;
+            border-radius: 0px;
+            margin-left: 1px;
+            float: left;
+        }
+        input {
+            width: 100px;
+            margin-left: 10px;
+        }
+        button {
+            display: inline-block;
+            margin: 5px 0;
+            padding: 5px 10px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            border-radius: 0;
+        }
+    </style>
 </head>
 <body>
-  <div class="w3-container">
-    <h1 class="w3-center">Informācijas daudzuma mērvienības</h1>
-    <form class="custom-form">
-      <!-- Pirma rindkopa -->
-      <p>
-        Informācijas daudzums bitos:<br>
-        <input type="text" id="bits">
+    
+    <h1>Informācijas daudzuma mērvienības</h1>
+    <form>
+        <div class="container">
+            <input type="text" id="gb" value"2"> GB=
+        </div>
         <br>
-        <input type="button" value="Rēķināt bitos" onclick="document.getElementById('bits').value = '8192';">
-      </p>
-      <!-- Otrā rindkopa -->
-      <p>
-        Informācijas daudzums baitos:<br>
-        <input type="text" id="baiti">
+        <div class="container">
+            <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
+            <input type="text" id="mb" readonly> MB
+        </div>
         <br>
-        <input type="button" value="Rēķināt baitos" onclick="document.getElementById('baiti').value = '1024';">
-      </p>
-      <!-- Trešā rindkopa -->
-      <p>
-        Informācijas daudzums kilobaitos:<br>
-        <input type="text" id="kilobaiti">
-        <br>
-        <input type="button" value="Rēķināt kilobaitos" onclick="document.getElementById('kilobaiti').value = '1';">
-      </p>
+        <div class="container">
+            <button type="button" onclick="convertToMiB()">Izteikt mibibaitos</button>
+            <input type="text" id="mib" readonly> MiB
+        </div>
     </form>
-  </div>
+    <script>
+        function convertToMB() {
+            let gb = parseFloat(document.getElementById('gb').value);
+            document.getElementById('mb').value = gb * 1000;
+        }
+        function convertToMiB() {
+            let gb = parseFloat(document.getElementById('gb').value);
+            document.getElementById('mib').value = gb * 953.674;
+        }
+    </script>
 </body>
 </html>
+
