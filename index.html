@@ -66,8 +66,6 @@
     }
   }
 </script>
-
-  </div>
   </div>
   <!-- Mobilā navigācija (pilna platuma, paslēpta pēc noklikšķināšanas uz hamburger ikonas) -->
   <div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="width: 100%;">
@@ -79,15 +77,29 @@
     <a href="#video" class="w3-bar-item w3-button">Video projekts</a>
     <a href="#msexcel" class="w3-bar-item w3-button">MS Excel</a>
     <a href="otrais.html" class="w3-bar-item w3-button">Inviduālā tēma</a>
-    <a href="otrais.html"> Pārējās lapas</a>
-		<ul class="dropdown">
-			<a href="dzerdaudz.html">Dzerdaudz.html</a>
-			<a href="forma for gith.html">Forma.html</a>
-			<a href="dzerr.html">Dzer.html</a>
-      <a href="skola.html">Skola.html</a>
-      <a href="dzd.html">Dzd.html</a>
-      <a href="mērvienības.html">Mērvienības.html</a>
-		</ul>
+    <div class="w3-container">
+    <!-- Poga, kas pārslēdz dropdown sarakstu -->
+    <a href="javascript:void(0)" class="w3-button w3-black" onclick="toggleDropdown()">Pārējās lapas</a>
+    
+    <!-- Dropdown saraksts, sākotnēji paslēpts -->
+    <ul id="dropdownMenu" class="dropdown" style="display: none;">
+      <li><a href="dzerdaudz.html">Dzerdaudz.html</a></li>
+      <li><a href="forma.html">Forma.html</a></li>
+      <li><a href="dzer.html">Dzer.html</a></li>
+      <li><a href="skola.html">Skola.html</a></li>
+      <li><a href="dzd.html">Dzd.html</a></li>
+      <li><a href="mērvienības.html">Mērvienības.html</a></li>
+    </ul>
+	   <script>
+  function toggleDropdown() {
+    var menu = document.getElementById("dropdownMenu");
+    if (menu.style.display === "none" || menu.style.display === "") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  }
+</script>
   </div>
 </div>
 
