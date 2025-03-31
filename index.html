@@ -7,8 +7,8 @@
   <!-- W3.CSS pamatbibliotēka -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <style>
-    /* Globālie stili */
-    body, h1, h2, h3, h4, h5, h6, p, ul, li, ol {
+    /* Globālie fonti un noformējums */
+    body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -17,16 +17,31 @@
     .w3-bar .w3-button {
       text-decoration: none;
     }
-    /* Pogām mobilajā režīmā */
+    /* Mobilajām ierīcēm pielāgota pogu stils */
     @media screen and (max-width: 600px) {
       .w3-bar .w3-button {
         padding: 12px 8px !important;
         font-size: 16px;
       }
-      /* Nodrošina, ka mobilā izvēlne aizņem visu platumu */
       #mobileNav {
         width: 100% !important;
       }
+    }
+    /* Dropdown saraksta stils */
+    .dropdown {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+    }
+    .dropdown li a {
+      display: block;
+      padding: 12px 16px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .dropdown li a:hover {
+      background-color: #444;
     }
     /* Video scenārija stils */
     .video-scenarijs h3 {
@@ -58,10 +73,10 @@
       <a href="#video" class="w3-bar-item w3-button w3-padding-large">Video projekts</a>
       <a href="#msexcel" class="w3-bar-item w3-button w3-padding-large">MS Excel</a>
       <a href="otrais.html" class="w3-bar-item w3-button w3-padding-large">Individuālā tēma</a>
+      
+      <!-- Dropdown sadaļa – tāpat kā desktop versijā -->
       <div class="w3-container">
-        <!-- Dropdown poga -->
         <a href="javascript:void(0)" class="w3-button w3-black" onclick="toggleDropdown()">Pārējās lapas</a>
-        <!-- Dropdown saraksts, sākotnēji paslēpts -->
         <ul id="dropdownMenu" class="dropdown" style="display: none;">
           <li><a href="dzerdaudz.html">Dzerdaudz.html</a></li>
           <li><a href="forma.html">Forma.html</a></li>
@@ -82,41 +97,17 @@
         </script>
       </div>
     </div>
-
-  <!-- Mobilā navigācija -->
-  <div class="w3-container w3-hide-large w3-hide-medium" style="margin-top:56px;">
-    <!-- Citi navigācijas elementi (ja nepieciešams) -->
-    <a href="#home" class="w3-button w3-black" style="display:block; width:100%;">Sākums</a>
-    <a href="#temas" class="w3-button w3-black" style="display:block; width:100%;">1. un 2. semestra tēmas</a>
-    <a href="#gimp" class="w3-button w3-black" style="display:block; width:100%;">GIMP darbi</a>
-    <a href="#modelesana" class="w3-button w3-black" style="display:block; width:100%;">3D modelēšana</a>
-    <a href="#msword" class="w3-button w3-black" style="display:block; width:100%;">MS Word</a>
-    <a href="#video" class="w3-button w3-black" style="display:block; width:100%;">Video projekts</a>
-    <a href="#msexcel" class="w3-button w3-black" style="display:block; width:100%;">MS Excel</a>
-    <a href="otrais.html" class="w3-button w3-black" style="display:block; width:100%;">Individuālā tēma</a>
-    <!-- Atsevišķa poga "Pārējās lapas" mobilajai navigācijai -->
-    <a href="javascript:void(0)" class="w3-button w3-black" style="display:block; width:100%;" onclick="toggleDropdownMobile()">Pārējās lapas</a>
-    <ul id="mobileDropdown" class="dropdown" style="display: none;">
-      <li><a href="dzerdaudz.html">Dzerdaudz.html</a></li>
-      <li><a href="forma.html">Forma.html</a></li>
-      <li><a href="dzer.html">Dzer.html</a></li>
-      <li><a href="skola.html">Skola.html</a></li>
-      <li><a href="dzd.html">Dzd.html</a></li>
-      <li><a href="mērvienības.html">Mērvienības.html</a></li>
-    </ul>
-  </div>
-
-  <script>
-    function toggleDropdownMobile() {
-      var mobileMenu = document.getElementById("mobileDropdown");
-      if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
-        mobileMenu.style.display = "block";
-      } else {
-        mobileMenu.style.display = "none";
-      }
-    }
-    // Ja nepieciešams arī desktop versijā, var izveidot toggle funkciju.
-  </script>
+    <!-- Mobilā navigācija (pilna platuma) -->
+    <div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="width: 100%;">
+      <a href="#home" class="w3-bar-item w3-button">Sākums</a>
+      <a href="#temas" class="w3-bar-item w3-button">1. un 2. semestra tēmas</a>
+      <a href="#gimp" class="w3-bar-item w3-button">GIMP darbi</a>
+      <a href="#modelesana" class="w3-bar-item w3-button">3D modelēšana</a>
+      <a href="#msword" class="w3-bar-item w3-button">MS Word</a>
+      <a href="#video" class="w3-bar-item w3-button">Video projekts</a>
+      <a href="#msexcel" class="w3-bar-item w3-button">MS Excel</a>
+      <a href="otrais.html" class="w3-bar-item w3-button">Individuālā tēma</a>
+    </div>
   </div>
 
   <!-- Sākuma galvene -->
@@ -125,7 +116,7 @@
     <p class="w3-xlarge">Šeit apkopoti mani darbi un mācību progress 10. klasē</p>
   </header>
 
-  <!-- 1. un 2. semestra tēmas -->
+  <!-- 1. un 2. semestra tēmas sadaļa -->
   <div class="w3-container w3-padding-64 w3-light-grey" id="temas">
     <h2 class="w3-center">1. un 2. semestra datorikas tēmas</h2>
     <p class="w3-center">Tabula ar visām tēmām, ko līdz šim esam ņēmuši</p>
@@ -157,7 +148,7 @@
     </div>
   </div>
 
-  <!-- GIMP darbi -->
+  <!-- GIMP darbi sadaļa -->
   <div class="w3-container w3-padding-64" id="gimp">
     <h2 class="w3-center">GIMP darbi</h2>
     <p class="w3-center">Mums bija jāizveido vairākas bildes GIMP vidē. Apakšā ir divas no tām, kuras tika novērtētas ar ballēm.</p>
@@ -173,7 +164,7 @@
     </div>
   </div>
 
-  <!-- 3D modelēšana -->
+  <!-- 3D modelēšana sadaļa -->
   <div class="w3-container w3-padding-64 w3-light-grey" id="modelesana">
     <h2 class="w3-center">3D modelēšana</h2>
     <p class="w3-center">Mums vajadzēja izveidot kompāniju un izdomāt, uztaisīt logo. Kā arī izveidot logo 3D modeli.</p>
@@ -193,13 +184,13 @@
     </div>
   </div>
 
-  <!-- MS Word -->
+  <!-- MS Word sadaļa -->
   <div class="w3-container w3-padding-64" id="msword">
     <h2 class="w3-center">MS Word</h2>
     <p class="w3-center">Apguvām jaunas lietas, kā sludināšanu, izveidot stilus, bet arī atkārtojām iepriekš mācīto.</p>
   </div>
 
-  <!-- Video projekts -->
+  <!-- Video projekts sadaļa -->
   <div class="w3-container w3-padding-64 w3-light-grey" id="video">
     <h2 class="w3-center">Video projekts</h2>
     <p class="w3-center">
@@ -219,7 +210,7 @@
     <div class="video-scenarijs w3-center" style="text-align: center;">
       <h3>1. Daļa: Grupas ideja un logotips</h3>
       <p><strong>Video saturs:</strong></p>
-      <ol style="display: inline-block; text-align: left;">
+      <ol style="text-align: left; width: 100%; max-width: 600px; margin: 0 auto;">
         <li>
           <strong>Atklāšanas titul kartītē:</strong>
           <ul class="sub-list">
@@ -253,7 +244,7 @@
     
       <h3>2. Daļa: 3D objekta veidošana un drukāšana</h3>
       <p><strong>Video saturs:</strong></p>
-      <ol style="display: inline-block; text-align: left;">
+      <ol style="text-align: left; width: 100%; max-width: 600px; margin: 0 auto;">
         <li>
           <strong>Video fragmenti no 3D objekta veidošanas un drukāšanas:</strong>
           <ul class="sub-list">
@@ -267,7 +258,7 @@
     
       <h3>3. Daļa: Reklāma par datorikas tēmu</h3>
       <p><strong>Video saturs:</strong></p>
-      <ol style="display: inline-block; text-align: left;">
+      <ol style="text-align: left; width: 100%; max-width: 600px; margin: 0 auto;">
         <li>
           <strong>Titul kartītē:</strong>
           <ul class="sub-list">
@@ -286,7 +277,9 @@
         <li>
           <strong>Sekcija 3:</strong>
           <ul class="sub-list">
-            <li>Teksts: "Automatizēta dublēšana: Izmantojiet rīkus, kas regulāri veido dublējumus (piemēram, katru dienu vai nedēļu). Daudzvietīga glabāšana: Saglabājiet dublējumus dažādās vietās – mākoņkrātuvē (piemēram, Google Drive, OneDrive), ārējos cietajos diskos vai NAS ierīcēs. Versiju pārvaldība: Dublējumu sistēma, kas saglabā vairākas versijas, palīdz atgūt iepriekšējās datu versijas, ja tās tiek bojātas vai pazaudētas."</li>
+            <li>
+              Teksts: "Automatizēta dublēšana: Izmantojiet rīkus, kas regulāri veido dublējumus (piemēram, katru dienu vai nedēļu). Daudzvietīga glabāšana: Saglabājiet dublējumus dažādās vietās – mākoņkrātuvē (piemēram, Google Drive, OneDrive), ārējos cietajos diskos vai NAS ierīcēs. Versiju pārvaldība: Dublējumu sistēma, kas saglabā vairākas versijas, palīdz atgūt iepriekšējās datu versijas, ja tās tiek bojātas vai pazaudētas."
+            </li>
             <li>Efekti: Virsraksta tekstiem – Appear by letter, pārejam tekstam – Float down, slaidam – Zoom in.</li>
           </ul>
         </li>
@@ -308,7 +301,7 @@
     
       <h3>4. Daļa: Noslēgums un titri</h3>
       <p><strong>Video saturs:</strong></p>
-      <ol style="display: inline-block; text-align: left;">
+      <ol style="text-align: left; width: 100%; max-width: 600px; margin: 0 auto;">
         <li>
           <strong>Noslēguma titul kartītē:</strong>
           <ul class="sub-list">
