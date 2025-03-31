@@ -2,58 +2,77 @@
 <html lang="lv">
 <head>
   <meta charset="UTF-8">
-  <title>Ciparu fona piemērs</title>
+  <title>Informācijas daudzuma mērvienības</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- W3.CSS pamatbibliotēka -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-    /* Pamatstils lapas fonam */
+    /* Dokumenta fona attēls */
     body {
-      margin: 0;
-      padding: 0;
-      /* Lapas fona krāsa (gaiši pelēka vai balta) */
-      background-color: #fafafa;
-      /* Fona attēls */
-      background-image: url("cipari.jpg");
-      /* Atkārtojam attēlu horizontāli un vertikāli */
+      background-image: url('cipari.jpg');
       background-repeat: repeat;
-      /* Attēla izmēru var atstāt automātisku vai pielāgot */
-      background-size: auto;
-      /* Var pievienot papildu caurspīdīguma efektu, ja nepieciešams
-         (piemēram, izmantojot pseidoelementus vai citu paņēmienu) */
     }
-
-    /* Izvēles piemērs virsrakstam, lai tas būtu centrēts utt. */
-    h1 {
-      text-align: center;
+    /* Formas stils */
+    .custom-form {
+      background-color: rgb(220,220,0);
       padding: 20px;
-      /* Var pievienot gaišu fona laukumu, lai cipari neradītu traucējumus */
-      background-color: rgba(255, 255, 255, 0.7);
-      margin: 0;
-    }
-
-    /* Piemērs satura konteineram, ja vēlaties teksta bloku */
-    .content {
-      width: 60%;
+      font-size: 20px;
+      max-width: 600px;
       margin: 40px auto;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 5px;
+      border-radius: 8px;
+    }
+    .custom-form p {
+      margin-bottom: 20px;
+    }
+    .custom-form input[type="text"] {
+      padding: 8px;
+      margin-top: 8px;
+      width: 80%;
+      font-size: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .custom-form input[type="button"] {
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .custom-form input[type="button"]:hover {
+      background-color: #1976D2;
     }
   </style>
 </head>
 <body>
-  <h1>Ciparu fona piemērs</h1>
-
-  <div class="content">
-    <p>
-      Šeit var atrasties lapas saturs. Fons atkārtojas, izmantojot
-      <em>cipari.jpg</em> attēlu, radot vieglu, gaišu “ūdenszīmes” iespaidu
-      ar cipariem “1001 0010” vai tamlīdzīgu bināro rakstu.
-    </p>
-    <p>
-      Ja vēlaties, lai cipari būtu vēl maigāki, var koriģēt attēlu
-      (piemēram, izmantojot attēlu apstrādes programmu) vai pievienot
-      papildu efektus, izmantojot CSS pseidoelementus.
-    </p>
+  <div class="w3-container">
+    <h1 class="w3-center">Informācijas daudzuma mērvienības</h1>
+    <form class="custom-form">
+      <!-- Pirma rindkopa -->
+      <p>
+        Informācijas daudzums bitos:<br>
+        <input type="text" id="bits">
+        <br>
+        <input type="button" value="Rēķināt bitos" onclick="document.getElementById('bits').value = '8192';">
+      </p>
+      <!-- Otrā rindkopa -->
+      <p>
+        Informācijas daudzums baitos:<br>
+        <input type="text" id="baiti">
+        <br>
+        <input type="button" value="Rēķināt baitos" onclick="document.getElementById('baiti').value = '1024';">
+      </p>
+      <!-- Trešā rindkopa -->
+      <p>
+        Informācijas daudzums kilobaitos:<br>
+        <input type="text" id="kilobaiti">
+        <br>
+        <input type="button" value="Rēķināt kilobaitos" onclick="document.getElementById('kilobaiti').value = '1';">
+      </p>
+    </form>
   </div>
 </body>
 </html>
-
